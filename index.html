@@ -7,19 +7,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
   :root {
-    --blue: #3b9bdc;
-    --gold: #c8882a;
-    --dark: #0a0a0f;
-    --mid: #12121e;
-    --white: #f0f0f0;
+    --blue:#3b9bdc; --gold:#c8882a; --dark:#0a0a0f; --mid:#12121e; --white:#f0f0f0;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
-    background: var(--dark);
-    color: var(--white);
-    font-family: "Kanit", sans-serif;
-    overflow-x: hidden;
-    min-height: 100vh;
+    background:var(--dark); color:var(--white);
+    font-family:"Kanit",sans-serif; overflow-x:hidden; min-height:100vh;
   }
   .bg-glow {
     position:fixed; inset:0; pointer-events:none; z-index:0;
@@ -42,18 +35,12 @@
   .bolt-1 { top:14%; right:10%; color:var(--blue); opacity:0.22; }
   .bolt-2 { top:58%; left:6%; color:var(--gold); opacity:0.18; font-size:30px; animation-delay:1.5s; }
   .bolt-3 { top:80%; right:18%; color:var(--blue); opacity:0.13; font-size:24px; animation-delay:2.5s; }
-  @keyframes boltFlash {
-    0%,100% { transform:scale(1); }
-    50% { transform:scale(1.15) rotate(6deg); }
-  }
+  @keyframes boltFlash { 0%,100% { transform:scale(1); } 50% { transform:scale(1.15) rotate(6deg); } }
   .star { position:fixed; pointer-events:none; z-index:0; color:rgba(255,255,255,0.15); animation:starTwinkle 4s ease-in-out infinite; }
   .star-1 { top:22%; left:16%; font-size:18px; animation-delay:0.5s; }
   .star-2 { top:45%; right:14%; font-size:14px; animation-delay:1.8s; }
   .star-3 { top:72%; left:22%; font-size:16px; animation-delay:3s; }
-  @keyframes starTwinkle {
-    0%,100% { opacity:0.1; transform:scale(1); }
-    50% { opacity:0.4; transform:scale(1.3); }
-  }
+  @keyframes starTwinkle { 0%,100% { opacity:0.1; transform:scale(1); } 50% { opacity:0.4; transform:scale(1.3); } }
 
   .page { position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; }
 
@@ -64,10 +51,7 @@
     background:linear-gradient(to bottom, transparent 40%, var(--dark) 100%);
   }
 
-  .identity {
-    display:flex; flex-direction:column; align-items:center;
-    margin-top:-70px; padding:0 20px; text-align:center;
-  }
+  .identity { display:flex; flex-direction:column; align-items:center; margin-top:-70px; padding:0 20px; text-align:center; }
   .avatar-wrap { position:relative; animation:floatY 4s ease-in-out infinite; }
   @keyframes floatY { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-10px); } }
   .crown {
@@ -75,10 +59,7 @@
     font-size:30px; filter:drop-shadow(0 0 8px var(--gold));
     animation:crownRock 2s ease-in-out infinite;
   }
-  @keyframes crownRock {
-    0%,100% { transform:translateX(-50%) rotate(-5deg); }
-    50% { transform:translateX(-50%) rotate(5deg); }
-  }
+  @keyframes crownRock { 0%,100% { transform:translateX(-50%) rotate(-5deg); } 50% { transform:translateX(-50%) rotate(5deg); } }
   .avatar-ring {
     width:130px; height:130px; border-radius:50%;
     border:3px solid var(--blue);
@@ -87,7 +68,7 @@
   }
   .avatar-ring img { width:100%; height:100%; object-fit:cover; image-rendering:pixelated; border-radius:50%; }
   .channel-name {
-    font-family:"Bebas Neue", sans-serif;
+    font-family:"Bebas Neue",sans-serif;
     font-size:clamp(60px,14vw,120px);
     letter-spacing:4px; line-height:0.9;
     background:linear-gradient(135deg,#fff 0%,var(--blue) 50%,var(--gold) 100%);
@@ -98,31 +79,23 @@
     0%,100% { filter:drop-shadow(0 4px 24px rgba(59,155,220,0.5)); }
     50% { filter:drop-shadow(0 4px 50px rgba(59,155,220,1)) drop-shadow(0 0 60px rgba(200,136,42,0.4)); }
   }
-  .tagline {
-    font-size:clamp(13px,2.5vw,18px); font-weight:700;
-    letter-spacing:2px; color:var(--gold); text-transform:uppercase; margin-top:4px;
-  }
+  .tagline { font-size:clamp(13px,2.5vw,18px); font-weight:700; letter-spacing:2px; color:var(--gold); text-transform:uppercase; margin-top:4px; }
   .tagline b { color:var(--white); }
 
   .player-wrap {
     margin-top:20px; position:relative; display:inline-block;
     animation:playerFloat 3.5s ease-in-out infinite;
   }
-  @keyframes playerFloat {
-    0%,100% { transform:translateY(0) rotate(-1deg); }
-    50% { transform:translateY(-14px) rotate(1deg); }
-  }
+  @keyframes playerFloat { 0%,100% { transform:translateY(0) rotate(-1deg); } 50% { transform:translateY(-14px) rotate(1deg); } }
   .player-wrap::after {
     content:""; position:absolute; bottom:-4px; left:50%; transform:translateX(-50%);
     width:90px; height:18px;
     background:radial-gradient(ellipse,rgba(59,155,220,0.45),transparent 70%);
     filter:blur(6px);
   }
-  .player-wrap img {
-    height:210px; width:auto; image-rendering:pixelated;
-    filter:drop-shadow(0 0 18px rgba(59,155,220,0.6));
-  }
+  .player-wrap img { height:210px; width:auto; image-rendering:pixelated; filter:drop-shadow(0 0 18px rgba(59,155,220,0.6)); }
 
+  /* BUTTONS */
   .links {
     display:flex; flex-direction:column; gap:14px;
     width:100%; max-width:440px;
@@ -140,31 +113,27 @@
   .link-btn:hover { transform:translateY(-4px) scale(1.02); }
   .link-btn:active { transform:scale(0.97); }
 
-  /* Left icon box — fixed width so all logos are in same-size container */
   .btn-icon-box {
     width:64px; height:56px; flex-shrink:0;
     display:flex; align-items:center; justify-content:center;
     background:rgba(0,0,0,0.25);
     border-right:2px solid rgba(255,255,255,0.08);
   }
-  .btn-icon-box img {
-    height:30px; width:auto; max-width:46px;
-    object-fit:contain; display:block;
-  }
+  .btn-icon-box img { height:30px; width:auto; max-width:46px; object-fit:contain; display:block; }
 
-  /* Label area */
-  .btn-label {
-    flex:1; text-align:center; padding:0 16px;
-  }
+  .btn-label { flex:1; text-align:center; padding:0 16px; }
 
-  .btn-yt { background:rgba(255,0,0,0.12); border-color:#ff3333; color:#fff; }
+  .btn-yt      { background:rgba(255,0,0,0.12);     border-color:#ff3333; color:#fff; }
   .btn-yt:hover { box-shadow:0 0 28px rgba(255,60,60,0.55); }
 
-  .btn-tt { background:rgba(0,0,0,0.35); border-color:#69C9D0; color:#fff; }
+  .btn-tt      { background:rgba(0,0,0,0.35);       border-color:#69C9D0; color:#fff; }
   .btn-tt:hover { box-shadow:0 0 28px rgba(105,201,208,0.5); }
 
-  .btn-donate { background:rgba(200,136,42,0.12); border-color:var(--gold); color:var(--gold); }
+  .btn-donate  { background:rgba(200,136,42,0.12);  border-color:var(--gold); color:var(--gold); }
   .btn-donate:hover { box-shadow:0 0 28px rgba(200,136,42,0.55); color:#fff; }
+
+  .btn-discord { background:rgba(88,101,242,0.15);  border-color:#5865F2; color:#fff; }
+  .btn-discord:hover { box-shadow:0 0 28px rgba(88,101,242,0.55); }
 
   .reveal { opacity:0; transform:translateY(24px); transition:opacity 0.6s, transform 0.6s; }
   .reveal.on { opacity:1; transform:none; }
@@ -214,6 +183,10 @@
     <a href="https://easydonate.app/xzentosz" target="_blank" class="link-btn btn-donate reveal">
       <div class="btn-icon-box"><img src="data:image/png;base64,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" alt="Donate" /></div>
       <span class="btn-label">Donate</span>
+    </a>
+    <a href="https://discord.gg/WWBAHPZRex" target="_blank" class="link-btn btn-discord reveal">
+      <div class="btn-icon-box"><img src="data:image/png;base64,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" alt="Discord" /></div>
+      <span class="btn-label">ชุมชน XZENTOSZ</span>
     </a>
   </div>
 </div>
